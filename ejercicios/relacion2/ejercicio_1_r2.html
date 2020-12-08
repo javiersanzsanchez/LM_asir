@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ejercicio 1</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/dashboard.css" rel="stylesheet">
+    <style>
+        #custom_ul {
+            list-style-image: url('../../recursos/iconos/chain.png');
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Javier Sanz Sánchez</a>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+            </div>
+            <!-- inicio Contenido -->
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1>Listas</h1>
+                <br /><br />
+                <h3>Ordenada</h3>
+                <h4><u>Comunidades autónomas</u></h4>
+                <ol>
+                    <li>Andalucia</li>
+                    <li>Madrid</li>
+                    <li>Extremadura</li>
+
+                </ol>
+                <br />
+                <h3>Desordenada</h3>
+                <h4><u>Ciudades Europeas</u></h4>
+                <ul>
+                    <li>Londres</li>
+                    <li>Madrid</li>
+                    <li>Paris</li>
+                    <li>Viena</li>
+                </ul>
+                <br />
+                <h3>Anidación de listas</h3>
+                <ol type="I">
+                    <li>Introducción
+                        <ol>
+                            <li>Concepto</li>
+                            <li>Fundamentación teórica II</li>
+                        </ol>
+                    </li>
+                    <li>Primeros pasos
+                        <ul id="custom_ul">
+                            <li>Uno</li>
+                            <li>Dos</li>
+                            <li>Tres</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <!-- fin contenido -->
+        </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function () {
+
+            $.ajax({
+                url: "../../sidebar.html"
+            }).done(function (data) {
+                document.getElementById('sidebar').innerHTML = data;
+
+            });
+        };
+
+
+    </script>
+</body>
+
+</html>

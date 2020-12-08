@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ejercicio 3</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/dashboard.css" rel="stylesheet">
+    <meta http-equiv="refresh" content="5; url=http://www.safaicet.es/">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Javier Sanz Sánchez</a>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+
+            </div>
+            <!-- inicio Contenido -->
+
+            <div id="ejercicioContent" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1>Ejercicio 3</h1>
+                <!-- 
+                    Listado de caracteres especiales
+                    https://www.whatsmyip.org/html-characters/
+                -->
+
+                <div class="alert alert-info">
+                    OJO!! Esta pagina tiene un redireccionamiento dentro de <span id="countDown">5</span> segundos.
+                </div>
+
+                <p>CARACTERES ESPECIALES</p>
+                <p>copyright &copy;</p>
+                <p>registro &reg;</p>
+                <br>
+                <p>MÁS CARACTERES ESPECIALES</p>
+                <p>Un cuarto: &frac14;</p>
+                <p>Un medio: &frac12;</p>
+                <p>Tres cuartos: &frac34;</p>
+                <br />
+                <p>SÍMBOLOS MONETARIOS</p>
+                <p>Centavo: &cent;</p>
+                <p>Dólar: &dollar;</p>
+                <p>Libra esterlina: &pound;</p>
+                <p>Yen: &yen;</p>
+                <p>Euro: &euro;</p>
+                <br />
+                <p>FLECHAS</p>
+                <p>Izquierda: &larr;</p>
+                <p>Derecha: &rarr;</p>
+                <p>Arriba: &uarr;</p>
+                <p>Abajo: &darr;</p>
+                <p>Doble flecha: &harr;</p>
+
+
+
+
+
+            </div>
+            <!-- fin contenido -->
+        </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function () {
+            var countTime = 4;
+            startTimer(countTime);
+            $.ajax({
+                url: "../../sidebar.html"
+            }).done(function (data) {
+                //alert(data);
+                document.getElementById('sidebar').innerHTML = data;
+            });
+        };
+        function startTimer(duration) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10)
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? minutes : minutes;
+                seconds = seconds < 10 ? seconds : seconds;
+                console.log(seconds);
+                document.getElementById('countDown').innerHTML = seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+
+    </script>
+</body>
+
+</html>

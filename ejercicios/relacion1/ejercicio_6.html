@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ejercicio 6</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/dashboard.css" rel="stylesheet">
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Javier Sanz Sánchez</a>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+
+            </div>
+            <!-- inicio Contenido -->
+
+            <div id="ejercicioContent" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1>Ejercicio 6</h1>
+                <a href="https://www.abc.es" target="_blank"><img class="center" alt="ABC" src="../../recursos/imagenes/ABC_logo.svg" width="100" height="100"></a>
+                <div style="text-align: center;">
+                    <a href="https://www.diariosur.es" target="_blank"><img class="botLeft" alt="ABC" src="../../recursos/imagenes/SUR_logo.svg" width="100" height="100"></a>
+                    <a href="http://elpais.com" target="_blank"><img class="botRight" alt="ABC" src="../../recursos/imagenes/PAIS_logo.svg" width="100" height="100"></a>
+                </div>
+
+                
+            </div>
+            <!-- fin contenido -->
+        </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function () {
+            $.ajax({
+                url: "../../sidebar.html"
+            }).done(function (data) {
+                //alert(data);
+                document.getElementById('sidebar').innerHTML = data;
+            });
+        };
+
+
+    </script>
+</body>
+
+</html>

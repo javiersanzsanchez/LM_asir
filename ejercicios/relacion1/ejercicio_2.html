@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ejercicio 2</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/dashboard.css" rel="stylesheet">
+    <style>
+        #element0 {
+            font-size: 10pt;
+        }
+
+        #element1 {
+            font-size: 15pt;
+        }
+
+        #element2 {
+            font-size: 20pt;
+        }
+
+        #element3 {
+            font-size: 30pt;
+        }
+
+        #bigRed {
+            color: red;
+            font-size: 30pt;
+        }
+
+        #smallBlue {
+            color: royalblue;
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Javier Sanz Sánchez</a>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+
+            </div>
+            <!-- inicio Contenido -->
+
+            <div id="ejercicioContent" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1>Ejercicio 2</h1>
+                <p><span id='element0'>A</span><span id='element1'>A</span><span id='element2'>A</span><span
+                        id='element3'>A</span><span id='element2'>A</span><span id='element1'>A</span><span
+                        id='element0'>A</span></p>
+                <p id="smallBlue"><span id='bigRed'>E</span>sto es una <span id='bigRed'>P</span>rueba</p>
+            </div>
+            <!-- fin contenido -->
+        </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function () {
+            $.ajax({
+                url: "../../sidebar.html"
+            }).done(function (data) {
+                //alert(data);
+                document.getElementById('sidebar').innerHTML = data;
+            });
+        };
+
+
+    </script>
+</body>
+
+</html>

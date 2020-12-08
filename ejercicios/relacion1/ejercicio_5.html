@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ejercicio 5</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Javier Sanz Sánchez</a>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+
+            </div>
+            <!-- inicio Contenido -->
+
+            <div id="ejercicioContent" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1>Ejercicio 5</h1>
+                <nav>
+                    <a href="#soldados">Cuando éramos soldados</a>
+                    <a href="#doctor">Doctor t y las mujeres</a>
+                    <a href="#footer">Final</a>
+                </nav>
+                <div id="clones">
+                    <h3>Episodio 2: El ataque de los clones</h3>
+                    <p>Sin duda, George Lucas lo tenía todo a su favor: una estructura consolidada, arropada por una
+                        retahíla de
+                        iconos que funcionan de cara a un público que demuestra una y otra vez su fidelidad a las
+                        entregas
+                        galácticas. Aparte del poder de atracción que posee Star Wars, tras el "Episodio 1: la amenaza
+                        fantasma",
+                        nos encontrábamos ante uno de los platos fuertes de la serie: la transformación del dulce
+                        Anakin en el
+                        villano y oscuro Dar Vather.</p>
+                    <p>Pese a partir de una base claramente favorable, Lucas se ha perdido claramente en el guión, que
+                        resulta
+                        ñoño y caótico. La progresión sicológica de Anakin hacia el lado oscuro no responde a
+                        ningún tipo de
+                        lógica. A la vez, la estructura global de la película resulta inestable y atolondrada,
+                        dividiéndose en
+                        diferentes bloques exageradamente inconexos: la historia de amor entre Anakin y Amidala, las
+                        batallas sin
+                        sentido y un pequeño resquicio dedicado al avance de la historia (insuficiente para la cantidad
+                        de
+                        información que se pretende transmitir).</p>
+                </div>
+                <br />
+                <nav>
+                    <a href="#clones">Principio</a>
+                    <a href="#doctor">Doctor t y las mujeres</a>
+                    <a href="#footer">Final</a>
+                </nav>
+                <div id="soldados">
+                    <h3>Cuando éramos soldados</h3>
+                    <p>Como siempre, el australiano Mel Gibson, hace alardes de patriotismo Yanqui, y también deja
+                        salir su vena
+                        católica durante toda la película, ¿es que acaso el Sr. Gibson a pagado la película entera?.
+                        Una Madeline
+                        Stone rozando lo patético, y la pregunta que se hace todo el mundo. ¿Cómo una mujer en el 1968
+                        se pudo
+                        meter silicona en los labios?, cada vez que aparece su cara desmejorada te saca de la película,
+                        lo mismo
+                        ocurre con el infortunado chico de American Pie (Chris Klein).</p>
+                    <p>No todo es malo en la película, también nos encontramos una extraordinaria batalla, donde
+                        muchas veces la
+                        dureza de las imágenes hacen apartar la vista de la pantalla. En mi opinión, las batallas
+                        serian casi
+                        perfectas si no fueran por los patéticos diálogos entre los soldados. En definitiva, la
+                        película está
+                        rozando la mediocridad, (parte de culpa el guion), lo único que lo salva es la producción
+                        (magnifica), y
+                        posiblemente la dirección (solo en las batallas).</p>
+                </div>
+                <br />
+
+                <nav>
+                    <a href="#clones">Principio</a>
+                    <a href="#soldados">Cuando éramos soldados</a>
+                    <a href="#footer">Final</a>
+                </nav>
+                <div id="doctor">
+                    <h3>El Doctor T y las mujeres</h3>
+                    <p>Lo que en un principio pretendía ser una comedia se convierte en una historia aburrida,
+                        demasiado larga y
+                        con un argumento bastante flojo. Aunque no lo parezca, el director es Robert Altman, y a pesar
+                        de su
+                        prestigio y del plantel de conocidos actores que tuvo, la película no le ha salido del todo
+                        bien. Uno de
+                        los puntos más criticables a lo largo del film es el papel que juega la mujer; ni siquiera una,
+                        de las
+                        muchas protagonistas, se escapa de la histeria pero parece que todo se resuelve con la presencia
+                        de ese
+                        magnífico, comprensivo y sobre todo increíble Dr. T (Richard Gere), el único capaz de
+                        calmarlas a todas y
+                        aportar tranquilidad a la trama.</p>
+                </div>
+
+                <nav>
+                    <a href="#clones">Principio</a>
+                    <a href="#soldados">Cuando éramos soldados</a>
+                    <a href="#doctor">Doctor t y las mujeres</a>
+                    <a href="#Final">Final</a>
+                </nav>
+                <footer id="footer"></footer>
+            </div>
+            <!-- fin contenido -->
+        </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function () {
+            $.ajax({
+                url: "../../sidebar.html"
+            }).done(function (data) {
+                //alert(data);
+                document.getElementById('sidebar').innerHTML = data;
+            });
+        };
+
+
+    </script>
+</body>
+
+</html>

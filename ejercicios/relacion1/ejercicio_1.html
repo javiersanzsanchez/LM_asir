@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ejercicio 1</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Javier Sanz Sánchez</a>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+            </div>
+            <!-- inicio Contenido -->
+
+            <div id="ejercicioContent" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1>Ejercicio 1</h1>
+                <h2 style="text-align: center;">EL LENGUAGE HTML</h2>
+                <p>El HTML es un lenguaje que sirve para escribir hipertexto, es decir, documentos de texto presentado
+                    de forma estructurada, con enlaces que conducen a otros documentos o a otras fuentes de información
+                    que pueden estar en tu propia máquina o en máquinas remotas de la red. Todo ello se puede presentar
+                    acompañado de gráficos estáticos o animados y sonidos.</p>
+                <hr>
+                <p style="text-align: right;">Por supuesto, la estética de los documentos escritos en HTML no se limita
+                    a texto digamos normal; consigue todos los efectos que habitualmente se pueden producir con un
+                    moderno procesador de textos</p>
+                <p>Mucha gente asocia este lenguaje con complicados y poderosos servidores de información que
+                    misteriosamente alguien programa, y que seguramente es un genio en estas cuestiones. Pues no es así.
+                    Esto es muy sencillo y más práctico de lo que parece.</p>
+                <hr width="50%">
+                <p style="text-align: center;">Todas las codificaciones de efecto en el texto que forman el lenguaje
+                    HTML no son más que instrucciones para el visualizador. Partiendo de esto, se entiende el porqué no
+                    se ve lo mismo con todos los visualizadores.</p>
+                <p>Actualmente existen multitud de ellos, aunque los más conocidos son el Internet Explorer de Microsoft
+                    (IE) y el Netscape Navigator de Netscape, sin olvidar el navegador Ópera, que tiene fama de ser el
+                    que más respeta los estándares.</p>
+            </div>
+            <!-- fin contenido -->
+        </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function () {
+            
+            $.ajax({
+                url: "../../sidebar.html"
+            }).done(function (data) {
+                document.getElementById('sidebar').innerHTML = data;
+
+            });
+        };
+
+
+    </script>
+</body>
+
+</html>
