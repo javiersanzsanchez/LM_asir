@@ -10,8 +10,8 @@ function loadPaises(){
         //console.log(data);
         data.forEach(function(pais) {
             console.log(pais); // name numericCode
-            document.getElementById('sidebar').append('<option value="'+pais.numericCode+'">'+pais.name+'</option>');
+            document.getElementById('paises').append('<option value="'+pais.numericCode+'">'+pais.name+'</option>');
         });
-        document.getElementById("paises").selectpicker("refresh");
+        //document.getElementById("paises").selectpicker("refresh");
     });
 }
