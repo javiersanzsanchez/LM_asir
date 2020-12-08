@@ -1,0 +1,55 @@
+
+
+
+#pagina {
+    background-image: url(../../../recursos/imagenes/fons.JPG);
+    width: 1024px;
+    margin: auto;
+
+}
+
+.h_verde{
+    color: olivedrab;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.h_rojo{
+    font-size: large;
+    color: tomato;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+hr{
+    border-bottom: double #45B39D 4px;
+}
+
+.centrado{
+    text-align: center;
+}
+
+li{
+    list-style-image: url(../../../recursos/iconos/ok.jpg);
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer{
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.table-container{
+    padding: 30px;
+    align-content: center;
+}
+
+table{
+    border-color: black;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+th{
+    background-color: #45B39D;
+    text-align: center;
+}
