@@ -12,8 +12,14 @@
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/dashboard.css" rel="stylesheet">
     <style>
-        #custom_ul {
-            list-style-image: url('../../recursos/iconos/chain.png');
+        th{
+            background-color: lightgray;
+            text-align: center;
+            font-weight: bold;
+        }
+        .celda-centrada{
+            text-align: center;
+            vertical-align: auto;
         }
     </style>
 
@@ -39,38 +45,138 @@
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1>Tablas</h1>
                 <h2 style="color: cornflowerblue; text-align: center;"><u>Cursos F.P.O.</u></h2>
-                <p>Curso: Administrador de servidores y páginas WEB Mes: Marzo</p>
-                <dirv class="row">
-                    <table class="table table-bordered">
+                <p>Curso: Administrador de servidores y páginas WEB<br/>Mes: Marzo</p>
+                <br/>
+                <div class="row col-sm-12">
+                    <table style="width: 50%; margin: auto;" class="table table-bordered">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th>L</th>
+                            <th>M</th>
+                            <th>X</th>
+                            <th>J</th>
+                            <th>V</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td>1</td>
+                              <td>2</td>
+                              <td>3</td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>7</td>
+                              <td>8</td>
+                              <td>9</td>
+                              <td>10</td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>13</td>
+                              <td>14</td>
+                              <td>15</td>
+                              <td>16</td>
+                              <td>17</td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>20</td>
+                              <td>21</td>
+                              <td>22</td>
+                              <td>23</td>
+                              <td>24</td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>27</td>
+                              <td>28</td>
+                              <td>29</td>
+                              <td>30</td>
+                              <td>31</td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
                         </tbody>
                       </table>
-                </dirv>
+                </div>
+                <div class="row col-sm-12">
+                    <br/>
+                    <br/>
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th class="col-sm-3">Profesor</th>
+                            <th class="col-sm-6">Módulos</th>
+                            <th class="col-sm-3">Horas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="celda-centrada">
+                              <td rowspan="2">Manuel Valbuena</td>
+                              <td>HTML</td>
+                              <td rowspan="2">16:00 - 18:15</td>
+                            </tr>
+                            <tr class="celda-centrada">
+                                <td>Javascript</td>
+                            </tr>
+                            <tr class="celda-centrada">
+                              <td rowspan="2">Javier Pérez</td>
+                              <td>Internet Avanzado</td>
+                              <td rowspan="2">16:00 - 17:20<br/>(*)</td>
+                            </tr>
+                            <tr class="celda-centrada">
+                                <td>Apache</td>
+                            </tr>
+                            <tr class="celda-centrada">
+                              <td rowspan="2">Pedro Luis Garrido</td>
+                              <td>Bases de Datos: MySql</td>
+                              <td rowspan="2">18:45 - 21:00<br/>(**)</td>
+                            </tr>
+                            <tr class="celda-centrada">
+                                <td>PHP</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">(*)Siguiente clase 17:50 horas</td>
+                              </tr>
+                              <tr>
+                                <td colspan="3">(**)Salvo jueves de 16:00 a 18:15</td>
+                              </tr>
+                        </tbody>
+                    </table>
+                </div>
                 
             </div>
             <!-- fin contenido -->
