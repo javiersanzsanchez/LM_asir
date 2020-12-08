@@ -1,0 +1,9 @@
+th{
+    background-color: lightgray;
+    text-align: center;
+    font-weight: bold;
+}
+.celda-centrada{
+    text-align: center;
+    vertical-align: auto;
+}
